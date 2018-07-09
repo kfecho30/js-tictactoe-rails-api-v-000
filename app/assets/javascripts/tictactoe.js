@@ -44,6 +44,8 @@ function attachListeners() {
   $('#clear').on('click', () => clearGame());
 
   $('td').on('click', function(){
-    
+    if($(this).text() == "" && !checkWinner()){
+      doTurn(this);
+    }
   });
 }
