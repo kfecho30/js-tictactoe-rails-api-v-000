@@ -60,7 +60,7 @@ function saveGame(){
 }
 
 function previousGames() {
-  $('#games').text("");
+  $('#games').empty();
   $.get('/games', function(games){
     games.data.map(function(game){
       $('#games').append(`<button id="gameid-${game.id}>Game ${game.id}</button><br>"`)
