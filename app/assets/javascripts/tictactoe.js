@@ -69,16 +69,15 @@ function previousGames() {
   })
 }
 
-function loadGame(game) {
-  $('message').text("");
-  $.get(`/games/${game}`, function(g){
-    var state = g.data.attributes.state;
-    $("td").text((i, text) => state[i]);
-    currentGame = game.id;
-    turn = state.join('').length
-    checkWinner();
-  })
-}
+function loadGame(gameid){
+  $('#message').text("");
+  $.get(`/games/${gameid}`, function(game){
+  var state = game.data.attributes.state;
+  $("td").text((i,text) => state[i]);
+  currentGame = gameid;
+  turn = state.join('').length
+  checkWinner(); 
+})
 
 function clearGame() {
   $('td').empty();
