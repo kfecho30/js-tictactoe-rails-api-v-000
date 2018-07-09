@@ -5,6 +5,7 @@ var winners = [
   [0,4,8],[2,4,6],
   [0,3,6],[1,4,7],[2,5,8]
 ];
+
 $(document).ready(function(){
   attachListeners();
 });
@@ -33,7 +34,7 @@ function previousGames() {
 }
 
 function clearGame() {
-  
+  turn = 0
 }
 
 function attachListeners() {
