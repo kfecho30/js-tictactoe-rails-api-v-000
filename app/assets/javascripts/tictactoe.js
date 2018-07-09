@@ -49,7 +49,11 @@ function saveGame(){
 }
 
 function previousGames() {
-  
+  $.get('/games', function(games){
+    games.data.map(function(game){
+      $('#games').append(`<button id="gameid-${game.id}>Game ${game.id}</button>"`)
+    })
+  })
 }
 
 function clearGame() {
