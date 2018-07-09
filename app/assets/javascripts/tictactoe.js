@@ -1,7 +1,7 @@
 // Code your JavaScript / jQuery solution here
 var turn = 0
 var currentGame = 0
-var winners = [
+const winners = [
   [0,1,2],[3,4,5],[6,7,8],
   [0,4,8],[2,4,6],
   [0,3,6],[1,4,7],[2,5,8]
@@ -31,8 +31,8 @@ function updateState(td){
 }
 
 function checkWinner() {
-  var board = {};
-  var winner = false;
+  let board = {};
+  let winner = false;
 
   $('td').text((index, square) => board[index] = square);
 }
