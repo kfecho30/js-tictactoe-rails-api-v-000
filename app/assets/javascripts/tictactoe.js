@@ -25,7 +25,7 @@ function doTurn(td){
 var player = () => turn % 2 ? "O": "X";
 
 function updateState(td){
-  td.text = player();
+  td.innerHTML = player();
 }
 
 function checkWinner() {
