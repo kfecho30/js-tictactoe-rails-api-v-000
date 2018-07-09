@@ -45,6 +45,14 @@ function checkWinner() {
 }
 
 function saveGame(){
+  let state = $('td').toArray().map(x => x.innerText);
+  if (currentGame) {
+    $.ajax({
+      type: 'patch',
+      url: `/games/${currentGame}`,
+      data: {state: state}
+    });
+  }
   
 }
 
