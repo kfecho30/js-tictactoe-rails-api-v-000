@@ -28,6 +28,10 @@ function previousGames() {
   
 }
 
+function clearGame() {
+  
+}
+
 function attachListeners() {
   $('#save').on('click', () => saveGame());
   $('#previous').on('click', () => previousGames());
