@@ -9,6 +9,10 @@ var winners = [
 
 $(attachListeners);
 
+function setMessage(text) {
+  $('#message').append(text);
+}
+
 function doTurn(td){
   updateState(td)
   turn++
@@ -16,7 +20,7 @@ function doTurn(td){
     saveGame();
     clearGame();
   } else if (turn === 9) {
-    $('#message').append("Tie game.")
+    setMessage("Tie game.")
     saveGame();
     clearGame();
   }
