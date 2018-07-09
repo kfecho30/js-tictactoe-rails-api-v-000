@@ -37,7 +37,7 @@ function checkWinner() {
   $('td').text((i, td) => board[i] = td);
   winners.some(function(combo) {
     if (board[combo[0]] !== "" && board[combo[0]] === board[combo[1]] && board[combo[1]] === board[combo[2]]) {
-      setMessage(`Player ${board[combo[0]]} won!`)
+      setMessage(`Player ${board[combo[0]]} Won!`)
       winner = true;
     }
   })
