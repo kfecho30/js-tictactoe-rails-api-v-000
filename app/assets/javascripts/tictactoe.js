@@ -1,6 +1,10 @@
 // Code your JavaScript / jQuery solution here
 var turn = 0
 
+$(document).ready(
+  attachListeners();
+)
+
 function doTurn(square){
   updateState(square)
   turn++
