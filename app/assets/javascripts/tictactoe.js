@@ -71,7 +71,7 @@ function previousGames() {
 
 function loadGame(game) {
   $('message').text("");
-  $.get('/games/${game}' function(g){
+  $.get(`/games/${game}`, function(g){
     var state = game.data.attributes.state;
     $("td").text((i, text) => state[i]);
     currentGame = game;
