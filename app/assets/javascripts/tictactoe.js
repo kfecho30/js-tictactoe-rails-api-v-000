@@ -78,6 +78,7 @@ function loadGame(gameid){
   turn = state.join('').length
   checkWinner(); 
 })
+}
 
 function clearGame() {
   $('td').empty();
