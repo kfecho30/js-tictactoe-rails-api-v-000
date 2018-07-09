@@ -9,9 +9,7 @@ var winners = [
 
 $(attachListeners);
 
-function setMessage(text) {
-  $('#message').append(text);
-}
+var setMessage = (text) => $('#message').append(text);
 
 function doTurn(td){
   updateState(td)
