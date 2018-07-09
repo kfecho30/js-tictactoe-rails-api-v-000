@@ -1,9 +1,9 @@
 // Code your JavaScript / jQuery solution here
 var turn = 0
 
-$(document).ready(
+$(document).ready(function(){
   attachListeners();
-)
+});
 
 function doTurn(square){
   updateState(square)
