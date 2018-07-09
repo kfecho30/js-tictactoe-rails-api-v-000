@@ -74,7 +74,7 @@ function loadGame(game) {
   $.get(`/games/${game}`, function(g){
     var state = g.data.attributes.state;
     $("td").text((i, text) => state[i]);
-    currentGame = game;
+    currentGame = game.id;
     turn = state.join('').length
     checkWinner();
   })
