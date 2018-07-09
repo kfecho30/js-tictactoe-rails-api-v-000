@@ -46,7 +46,7 @@ function previousGames() {
 }
 
 function clearGame() {
-  $('td').empty()
+  $('td').empty();
   turn = 0
   currentGame = 0
 }
