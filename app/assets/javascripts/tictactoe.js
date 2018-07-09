@@ -8,9 +8,17 @@ var winners = [
 
 $(attachListeners);
 
-function doTurn(square){
-  updateState(square)
+function doTurn(td){
+  updateState(td)
   turn++
+  if(checkWinner()){
+    saveGame();
+    clearGame();
+  } else if (turn === 9) {
+    $('#message').append("Tie game.")
+    saveGame();
+    clearGame();
+  }
 }
 
 var player = () => turn % 2 ? "O": "X";
