@@ -52,7 +52,10 @@ function saveGame(){
       url: `/games/${currentGame}`,
       data: {state: state}
     });
-  }
+  } else 
+  $.post('/games', {state: state}).done(function(response){
+    currentGame = response.data.id
+  })
   
 }
 
