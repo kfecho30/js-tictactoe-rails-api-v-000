@@ -69,6 +69,17 @@ function previousGames() {
   })
 }
 
+function loadGame(game) {
+  $('message').text("");
+  $.get('/games/${game}' function(g){
+    var state = game.data.attributes.state;
+    $("td").text((i, text) => state[i]);
+    currentGame = game;
+    turn = state.join('').length
+    checkWinner();
+  })
+}
+
 function clearGame() {
   $('td').empty();
   turn = 0
