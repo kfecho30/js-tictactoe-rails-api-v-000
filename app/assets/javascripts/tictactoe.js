@@ -59,13 +59,13 @@ function saveGame(){
   
 }
 
-function previousGames() {
-  $('#games').empty();
+function previousGames(){
+  $("#games").text("");
   $.get('/games', function(games){
     games.data.map(function(game){
-      $('#games').append(`<button id="gameid-${game.id}>Game ${game.id}</button><br>"`)
-      $('#gameid-' + game.id).click(() => loadGame(game.id));
-    })
+    $('#games').append(`<button id="gameid-${game.id}">Game: ${game.id}</button><br>`);
+    $("#gameid-" + game.id).click(() => loadGame(game.id));
+   })
   })
 }
 
