@@ -21,5 +21,5 @@ function checkWinner() {
 }
 
 function attachListeners() {
-  
+  $('#save').on('click'), () => saveGame());
 }
