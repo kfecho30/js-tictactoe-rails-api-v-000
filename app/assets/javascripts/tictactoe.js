@@ -20,6 +20,16 @@ function checkWinner() {
   
 }
 
+function saveGame(){
+  
+}
+
+function previousGames() {
+  
+}
+
 function attachListeners() {
-  $('#save').on('click'), () => saveGame());
+  $('#save').on('click', () => saveGame());
+  $('#previous').on('click', () => previousGames());
+  $('#clear').on('click', () => clearGame());
 }
