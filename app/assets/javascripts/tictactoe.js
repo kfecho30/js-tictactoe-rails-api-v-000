@@ -6,9 +6,7 @@ var winners = [
   [0,3,6],[1,4,7],[2,5,8]
 ];
 
-$(document).ready(function(){
-  attachListeners();
-});
+$(attachListeners);
 
 function doTurn(square){
   updateState(square)
@@ -22,7 +20,10 @@ function updateState(){
 }
 
 function checkWinner() {
-  
+  var board = {};
+  var winner = false;
+
+  $('td').text((index, square) => board[index] = square);
 }
 
 function saveGame(){
