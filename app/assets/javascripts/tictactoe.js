@@ -34,7 +34,14 @@ function checkWinner() {
   let board = {};
   let winner = false;
 
-  $('td').text((index, square) => board[index] = square);
+  $('td').text((i, td) => board[i] = td);
+  winners.some(function(combos) {
+    if (board[combo[0]] !== "" && board[combo[0]] === board[combo[1]] && board[combo[1]] === board[combo[2]]) {
+      setMessage(`Player ${board[combo[0]]} won!`)
+      winner = true;
+    }
+  })
+  return winner;
 }
 
 function saveGame(){
